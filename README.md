@@ -2,7 +2,7 @@
 
 A react native component for making onboard screens
 
-![Screenshot](https://raw.githubusercontent.com/thunder-js/storm-onboarding/blob/master/screenshots/img1.png)
+![Screenshot](https://raw.githubusercontent.com/thunder-js/storm-onboarding/master/screenshots/img1.png)
 
 ## Installation
 ```
