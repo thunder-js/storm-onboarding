@@ -1,6 +1,6 @@
 {
 	"name": "storm-onboarding",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"main": "index.js",
 	"scripts": {
 		"start": "node node_modules/react-native/local-cli/cli.js start",
@@ -9,8 +9,8 @@
 	"dependencies": {},
 	"devDependencies": {
 		"babel-eslint": "^7.2.3",
-		"babel-jest": "20.0.3",
-		"babel-preset-react-native": "2.0.0",
+		"babel-jest": "21.2.0",
+		"babel-preset-react-native": "4.0.0",
 		"eslint": "^3.19.0",
 		"eslint-config-airbnb": "^15.0.1",
 		"eslint-import-resolver-babel-module": "^3.0.0",
@@ -19,8 +19,6 @@
 		"eslint-plugin-jsx-a11y": "^5.0.1",
 		"eslint-plugin-prefer-object-spread": "^1.2.1",
 		"eslint-plugin-react": "^7.0.1",
-		"babel-jest": "21.2.0",
-		"babel-preset-react-native": "4.0.0",
 		"jest": "21.2.1",
 		"react-test-renderer": "16.0.0"
 	},
