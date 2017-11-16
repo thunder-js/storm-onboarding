@@ -9,10 +9,8 @@ import Dots from './Dots'
 const { width } = Dimensions.get('window')
 
 const Logo = styled(Image)`
-  align-self: center;
+  align-self: stretch;
   margin-top: 40px;
-  flex: 1;
-  align-self: stretch;;
   height: 60px;
   margin-bottom: 40px;
 `;
