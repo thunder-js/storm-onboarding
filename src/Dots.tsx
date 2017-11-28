@@ -1,7 +1,6 @@
 import React from 'react'
 import { View, Text, TouchableOpacity } from 'react-native'
 import styled from 'styled-components/native'
-import { func, number } from 'prop-types'
 
 const Wrapper = styled(View)`
   flex-direction: row;
@@ -13,7 +12,7 @@ const Dot = styled(View)`
   width: 10px;
   height: 10px;
   border-radius: 5px;
-  background-color: ${props => props.selected ? '#FFF' : 'rgba(255, 255, 255, 0.5)'};
+  background-color: ${(props: {selected: boolean}) => props.selected ? '#FFF' : 'rgba(255, 255, 255, 0.5)'};
   margin-horizontal: 7px;
 `
 
@@ -89,12 +88,4 @@ const Dots = ({
     </Wrapper>
   )
 }
-Dots.propTypes = {
-  selectedIndex: number.isRequired,
-  numberOfDots: number.isRequired,
-  onSkip: func.isRequired,
-  onNext: func.isRequired,
-  onFinish: func.isRequired,
-}
-
 export default Dots

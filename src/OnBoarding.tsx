@@ -1,9 +1,6 @@
 import React from 'react';
-import { func, arrayOf, shape, any, string, bool } from 'prop-types'
 import { Image, View, Dimensions, ScrollView, Text } from 'react-native';
 import styled from 'styled-components/native';
-// import Gradient from '@common/components/Gradient';
-// import Text from '@common/components/Text'
 import Dots from './Dots'
 
 const { width } = Dimensions.get('window')
@@ -34,18 +31,39 @@ const Slide = styled(View)`
 `
 
 const Slider = styled(ScrollView)`
-  width: ${width};
+
 `
+
 //  TODO: Gradient
 const GradientBackground = styled(View)`
   flex: 1;
 `
 const SolidBackground = styled(View)`
   flex: 1;
-  background-color: ${props => props.color}
+  background-color: ${(props: {color: string}) => props.color}
 `
 
-class OnBoarding extends React.Component {
+export interface Page {
+  imageSource: any;
+  text: string;
+}
+
+export interface OnBoardingProps {
+  onSkip: any;
+  onFinish: any;
+  pages: Page[];
+  logoSource: any;
+  backgroundColor: string;
+  gradientBackground?: boolean;
+  gradientColors?: string[];
+} 
+export interface OnBoardingState {
+  currentIndex: number
+}
+
+export class OnBoarding extends React.Component<OnBoardingProps, OnBoardingState> {
+  scrollView: any
+
   constructor(props) {
     super(props)
     this.state = {
@@ -108,7 +126,6 @@ class OnBoarding extends React.Component {
           horizontal
           showsHorizontalScrollIndicator={false}
           onMomentumScrollEnd={this.handleMomentumScrollEnd}
-          width={width}
         >
           {
             pages.map((page, i) => (
@@ -134,21 +151,5 @@ class OnBoarding extends React.Component {
   }
 }
 
-OnBoarding.propTypes = {
-  onSkip: func.isRequired,
-  onFinish: func.isRequired,
-  pages: arrayOf(shape({
-    imageSource: any,
-    text: string,
-  })).isRequired,
-  logoSource: any.isRequired,
-  backgroundColor: string.isRequired,
-  gradientBackground: bool,
-  gradientColors: arrayOf(string),
-};
 
-OnBoarding.defaultProps = {
-  gradientBackground: false,
-  gradientColors: null,
-}
-export default OnBoarding;
+// export default OnBoarding
