@@ -74,7 +74,7 @@ export class OnBoarding extends React.Component<OnBoardingProps, OnBoardingState
   handleMomentumScrollEnd = (e) => {
     const {
       contentOffset,
-      layoutMeasurement,
+      layoutMeasurement
     } = e.nativeEvent;
     const currentIndex = Math.floor(contentOffset.x / layoutMeasurement.width)
     this.setState({
@@ -150,6 +150,3 @@ export class OnBoarding extends React.Component<OnBoardingProps, OnBoardingState
     )
   }
 }
-
-
-// export default OnBoarding

@@ -1,1 +1,1 @@
-export { OnBoarding } from './OnBoarding'
+export { OnBoarding } from './Novo'

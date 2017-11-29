@@ -64,7 +64,7 @@ const Dots = ({
     <Wrapper>
       <LeftButtonWrapper>
         <Button onPress={onSkip}>
-          <ButtonText>PULAR</ButtonText>
+          <ButtonText>PULAR :D</ButtonText>
         </Button>
       </LeftButtonWrapper>
 
